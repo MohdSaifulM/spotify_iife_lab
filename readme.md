@@ -10,7 +10,6 @@
 ## Preparation
 1. Fork and clone.
 2. Run `npm install`.
-	 *This will install javascript packages needed during development like grunt, jasmine, etc.*
 3. Run `parcel index.html` to start the server
 4. The starter code is in `index.js` and `spotify.js`. These are suggested ways to start. Feel free to modify as you wish.
 
