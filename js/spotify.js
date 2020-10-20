@@ -2,23 +2,23 @@ export const spotify = (function () {
     let state = {
         songs: [{
                 id: 1,
-                song: "a"
+                song: "I'm Yours."
             },
             {
                 id: 2,
-                song: "b"
+                song: "How is your CSS?"
             },
             {
                 id: 3,
-                song: "c"
+                song: "How is your bootstrap?"
             },
             {
                 id: 4,
-                song: "d"
+                song: "Lay it all over me"
             },
             {
                 id: 5,
-                song: "e"
+                song: "Je danse le MIA"
             },
         ],
         playlist: []

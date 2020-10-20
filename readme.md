@@ -20,5 +20,10 @@
 3. Add a shuffle button to allow user to shuffle the songs in the main songs list
 4. Allow user to create a customized playlist
 
+The basic page should look something like this.
+
+
+![screenshot](./screenshot.png)
+
 ## Further
 Style the page with bootstrap!
