@@ -140,10 +140,10 @@ var spotify = function () {
       song: "How is your bootstrap?"
     }, {
       id: 4,
-      song: "Lay it all over me"
+      song: "A Thousand Miles"
     }, {
       id: 5,
-      song: "Je danse le MIA"
+      song: "Give Me Love"
     }],
     playlist: []
   };
@@ -156,80 +156,18 @@ var spotify = function () {
   };
 
   ;
-  var dom = {
-    t_new: "add__song",
-    t_new_song: ".new__song"
-  }; //ASK EBERE WHY IT WORKS OUTSIDE OF RETURN AND NOT INSIDE
 
-  function addToPlaylist(id) {
-    //ADD SONG TO PLAYLIST
-    var song = state.songs.find(function (s) {
-      return s.id == id;
-    });
-    var html = "<li>".concat(song.song, "</li>");
-    document.querySelector(".my__playlist").insertAdjacentHTML("beforeend", html);
-  }
+  function addToPlaylist(id) {} //Suggested functions
+
 
   return {
-    getSongs: function getSongs() {
-      return state.songs;
-    },
+    getSongs: function getSongs() {},
     renderSongs: function renderSongs() {
-      var songs = this.getSongs(); //Display songs to songs__list
-
-      var songList = document.querySelector(".songs__list");
-      songList.innerHTML = "";
-      songs.forEach(function (s) {
-        var html = "<li>".concat(s.song, " <button class=\"add__song\" id=\"").concat(s.id, "\">+</button></li>");
-        songList.insertAdjacentHTML("beforeend", html); //add event listener for adding songs
-        //this.addToPlaylist(id)
-
-        document.getElementById("".concat(s.id)).addEventListener('click', function (e) {
-          console.log(e.target.id);
-          addToPlaylist(e.target.id); // console.log(songs);
-        });
-      });
+      console.log(state.songs);
     },
-    getInputData: function getInputData() {
-      return {
-        song: document.querySelector(dom.t_new_song).value
-      };
-    },
-    addSongs: function addSongs(song) {
-      //ADD SONG TO MAIN LIST
-      var id;
-
-      if (state.songs.length > 0) {
-        //   [{id:1},{id: 2}] = len: 2 -1 , pos: 1
-        id = state.songs[state.songs.length - 1].id + 1;
-      } else {
-        id = 1;
-      } //create object template
-
-
-      var newSong = new Song(id, song); //update state with object template
-
-      state.songs.push(newSong);
-      return newSong;
-    },
-    shuffle: function shuffle() {
-      //SHUFFLE LIST OF SONGS IN MAIN LIST
-      var shuffled = [];
-      var songsTemp = state.songs;
-
-      while (songsTemp.length > 0) {
-        //randomselect song from songsTemp
-        var randIdx = Math.floor(Math.random() * songsTemp.length); //push to shuffled
-
-        shuffled.push(songsTemp[randIdx]); //remove from songsTemp
-
-        songsTemp.splice(randIdx, 1);
-      } //update songs array
-
-
-      state.songs = shuffled;
-    },
-    dom: dom
+    getInputData: function getInputData() {},
+    addSongs: function addSongs(song) {},
+    shuffle: function shuffle() {}
   };
 }();
 
@@ -241,33 +179,12 @@ var _spotify = require("./js/spotify");
 
 // const spotify = require("./js/spotify");
 var app = function (s) {
-  function init() {
-    var dom = s.dom;
-    console.log(dom.t_new);
-    document.getElementById(dom.t_new).addEventListener("click", function () {
-      console.log("button clicked");
-
-      var _s$getInputData = s.getInputData(),
-          song = _s$getInputData.song;
-
-      if (song.trim().length > 0) {
-        console.log("it works");
-        var newMusic = s.addSongs(song);
-        s.renderSongs();
-      } else {
-        alert("Please input a song");
-      }
-    });
-  }
+  function init() {}
 
   return {
     render: function render() {
-      s.renderSongs();
       init();
-      document.querySelector(".shuffle__songs").addEventListener('click', function () {
-        s.shuffle();
-        s.renderSongs();
-      });
+      s.renderSongs();
     }
   };
 }(_spotify.spotify);
@@ -301,7 +218,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51675" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54173" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
