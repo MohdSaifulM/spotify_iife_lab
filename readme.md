@@ -12,7 +12,8 @@
 2. Run `npm install`.
 	 *This will install javascript packages needed during development like grunt, jasmine, etc.*
 3. Run `parcel index.html` to start the server
-4. Modify `index.js` and `spotify.js`.
+4. The starter code is in `index.js` and `spotify.js`. These are suggested way to start. Feel free to modify as you wish.
+
 
 ## Build the features for your app (work through them in order)
 1. Display all songs when user opens the page
