@@ -14,11 +14,11 @@ export const spotify = (function () {
             },
             {
                 id: 4,
-                song: "Lay it all over me"
+                song: "Last Christmas"
             },
             {
                 id: 5,
-                song: "Je danse le MIA"
+                song: "Je danse le Mia"
             },
         ],
         playlist: []
@@ -38,10 +38,7 @@ export const spotify = (function () {
 
     //ASK EBERE WHY IT WORKS OUTSIDE OF RETURN AND NOT INSIDE
     function addToPlaylist(id) {
-        //ADD SONG TO PLAYLIST
-        let song = state.songs.find(s => s.id == id);
-        let html = `<li>${song.song}</li>`
-        document.querySelector(".my__playlist").insertAdjacentHTML("beforeend", html)
+       
     }
 
     return {

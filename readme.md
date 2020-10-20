@@ -22,7 +22,6 @@
 
 The basic page should look something like this.
 
-
 ![screenshot](./screenshot.png)
 
 ## Further
